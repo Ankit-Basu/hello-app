@@ -1,10 +1,17 @@
 pipeline{
     agent any
-
+    
+    stages{
+        stage('Clone'){
+            steps {
+                echo 'Cloning successful'
+            }
+        }
+    }
     stages{
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
     }

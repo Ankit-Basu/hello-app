@@ -19,5 +19,10 @@ pipeline{
                 echo 'Running tests...' 
             }
         }
+        stage('Artifact') {
+            steps {
+                echo 'Archiving artifacts...'
+            }
+        }
     }
 }

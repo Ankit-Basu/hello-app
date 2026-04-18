@@ -19,9 +19,10 @@ pipeline{
                 echo 'Running tests...' 
             }
         }
-        stage('Artifact') {
+        stage('Archive') {
             steps {
-                echo 'Archiving artifacts...'
+                archiveArtifacts 
+                artifacts: 'target/*.jar'
             }
         }
     }
